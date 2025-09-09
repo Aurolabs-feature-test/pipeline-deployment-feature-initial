@@ -18,9 +18,9 @@ data "aws_codestarconnections_connection" "github" {
 
 # Pipeline module
 module "pipeline" {
-  source        = "git@github.com:Aurolabs-feature-test/terraform-aws-codepipeline-feature-intial.git?ref=feature-branch"
+  source        = "git@github.com:Aurolabs-feature-test/terraform-aws-codepipeline-feature-initial.git?ref=feature-branch"
   pipeline_name = "deployment-pipeline"
-  repo          = "Aurolabs-feature-test/aws-infrastructure-deployment-feature-intial"
+  repo          = "Aurolabs-feature-test/aws-infrastructure-deployment-feature-initial"
   branch        = "feature-branch"
   connection    = data.aws_codestarconnections_connection.github.arn
 }
